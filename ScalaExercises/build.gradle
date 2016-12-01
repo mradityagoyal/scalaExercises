@@ -21,6 +21,7 @@ repositories {
 dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
+    
     // https://mvnrepository.com/artifact/org.scalatest/scalatest_2.11
     testCompile group: 'org.scalatest', name: 'scalatest_2.11', version: '3.0.1'
     testCompile 'junit:junit:4.12'

@@ -34,5 +34,23 @@ class P01TestSuite extends UnitSpec {
     P01.lastNth(5, list).get should be(1)
     P01.lastNth(6, list).isDefined should be(false)
   }
+  
+  "Nth of List" should "work" in {
+    val list = List(0,1,2,3,4,5)
+    
+    for ( i <- 0 to 5) {
+      P01.nth(i, list).get should be (i)
+    }
+    a [NoSuchElementException] should be thrownBy{P01.nth(6, list).get}
+  }
+  
+  "NthRecursive of List" should "work" in {
+    val list = List(0,1,2,3,4,5)
+    
+    for ( i <- 0 to 5) {
+      P01.nthRecursive(i, list).get should be (i)
+    }
+    a [NoSuchElementException] should be thrownBy{P01.nth(6, list).get}
+  }
 
 }

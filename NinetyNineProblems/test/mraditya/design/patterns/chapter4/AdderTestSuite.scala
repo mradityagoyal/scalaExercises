@@ -6,17 +6,15 @@ import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class AdderTestSuite extends UnitSpec{
+  import Adder._
   
-  class AdderImpl extends Adder
-  
-  object adder extends AdderImpl 
   
   "An Adder" should "add 3,4 to 7" in {
-    adder.sum(3, 4) should be (7)
+    sum(3, 4) should be (7)
   }
   
   it should "sum floats" in {
-    adder.sum(1.2,2.3) should be (3.5)
+    sum(1.2,2.3) should be (3.5)
   }
   
   val c1 = new Container(10)
